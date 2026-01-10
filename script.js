@@ -1,5 +1,5 @@
 // Fetch the markdown file from the GitHub repository
-fetch('https://raw.githubusercontent.com/Astrosp/Awesome-OSINT-For-Everything/main/README.md')
+fetch('https://cdn.jsdelivr.net/gh/Astrosp/Awesome-OSINT-For-Everything/README.md')
   .then(response => {
     if (!response.ok) {
       throw new Error('Failed to fetch the markdown file');
@@ -93,3 +93,4 @@ function displayResults(results) {
     });
   }
 }
+
