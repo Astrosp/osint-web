@@ -4,15 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OSINT Tools Search</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search for tools (e.g., google)">
-    <button id="searchButton"><img src="img/search.png" alt="Search"></button>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">OSINT Tools Discovery</h1>
+      <p class="subtitle">Search and explore powerful Open Source Intelligence tools</p>
+    </header>
+
+    <div class="search-section">
+      <div class="search-bar">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search for tools, categories, or keywords..." aria-label="Search tools">
+        <button id="clearButton" class="clear-button" aria-label="Clear search" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="searchStats" class="search-stats"></div>
+      <div id="categoryFilters" class="category-filters"></div>
+    </div>
+
+    <div id="loadingState" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading OSINT tools...</p>
+    </div>
+
+    <div id="results" class="results-grid"></div>
   </div>
-  <div id="results"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
