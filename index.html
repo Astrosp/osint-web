@@ -3,16 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OSINT Tools Search</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Awesome OSINT List | Searchable Directory</title>
+  <meta name="description" content="Searchable web directory and explorer for the Awesome-osint-list GitHub repository. Curated Open Source Intelligence tools and resources.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search for tools (e.g., google)">
-    <button id="searchButton"><img src="img/search.png" alt="Search"></button>
+<body class="theme-crimson">
+  <!-- Dynamic Atmospheric Lighting & Texture Grid -->
+  <div class="ambient-backdrop">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="technical-grid"></div>
   </div>
-  <div id="results"></div>
+
+  <div class="app-container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <a href="https://github.com/Astrosp/Awesome-osint-list" target="_blank" rel="noopener noreferrer" class="brand-link">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Awesome OSINT</span>
+            <span class="brand-sub">List Directory</span>
+          </div>
+        </a>
+        <a href="https://github.com/Astrosp/Awesome-osint-list" target="_blank" rel="noopener noreferrer" class="repo-badge">
+          <span class="pulse-dot"></span> Astrosp/Awesome-osint-list
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <div class="metric-pill">
+          <span class="metric-value" id="totalToolsCount">--</span>
+          <span class="metric-tag">Tools</span>
+        </div>
+        <div class="metric-pill">
+          <span class="metric-value" id="totalCategoriesCount">--</span>
+          <span class="metric-tag">Categories</span>
+        </div>
+        
+        <a href="https://github.com/Astrosp/Awesome-osint-list" target="_blank" rel="noopener noreferrer" class="github-action-btn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Star on GitHub</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-pill">
+        <span class="hero-pill-sparkle">✦</span>
+        <span>Searchable Directory for <strong>Awesome-osint-list</strong></span>
+      </div>
+      <h1 class="hero-title">
+        Discover & Search <span class="gradient-text">OSINT Tools</span>
+      </h1>
+      <p class="hero-subtitle">
+        Instant real-time search across hundreds of curated intelligence tools, investigative databases, and cybersecurity resources from GitHub.
+      </p>
+    </section>
+
+    <!-- Search Hero & Control Section -->
+    <section class="search-section">
+      <div class="search-box-wrapper">
+        <div class="search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search by tool name, capability, or keyword (e.g. shodan, username, email, domains)..." 
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <div class="search-actions">
+          <button id="clearSearchBtn" class="action-btn clear-btn hidden" title="Clear search (Esc)" aria-label="Clear search">
+            ✕
+          </button>
+          <div class="shortcut-hint" title="Press / anywhere to focus search">/</div>
+        </div>
+      </div>
+
+      <!-- Quick category filter chips -->
+      <div class="category-filters-container">
+        <div class="category-filters" id="categoryFilters">
+          <button class="cat-chip active" data-category="all">
+            All Tools <span class="chip-count" id="allCount">...</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active search info bar -->
+      <div class="search-status-bar">
+        <span id="resultsStats" class="results-stats">Connecting to Awesome-osint-list...</span>
+        <div class="view-controls">
+          <span class="status-tip">Tip: Press <kbd>/</kbd> to search, <kbd>Esc</kbd> to clear</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Results Grid / State Display -->
+    <main id="resultsContainer">
+      <div id="results" class="tools-grid">
+        <!-- Loading skeletons initially injected via JS -->
+      </div>
+      
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state hidden">
+        <div class="empty-icon">✦</div>
+        <h3>No intelligence tools found</h3>
+        <p>No tools matched your current search filters. Try adjusting keywords or selecting another category.</p>
+        <button id="resetFiltersBtn" class="reset-btn">Reset All Filters</button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Curated and maintained in <a href="https://github.com/Astrosp/Awesome-osint-list" target="_blank" rel="noopener noreferrer">Astrosp/Awesome-osint-list</a></p>
+      <div class="footer-meta">Curated for Ethical Hackers, Researchers & Analysts</div>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden">
+    <span class="toast-icon">✓</span>
+    <span id="toastMsg">URL copied to clipboard</span>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
